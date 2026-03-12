@@ -603,6 +603,7 @@ partial class Form1
         // 
         txtSSS.Location = new Point(670, 250);
         txtSSS.Name = "txtSSS";
+        txtSSS.ReadOnly = true;
         txtSSS.Size = new Size(100, 23);
         txtSSS.TabIndex = 51;
         // 
@@ -620,6 +621,7 @@ partial class Form1
         // 
         txtPhilHealth.Location = new Point(670, 278);
         txtPhilHealth.Name = "txtPhilHealth";
+        txtPhilHealth.ReadOnly = true;
         txtPhilHealth.Size = new Size(100, 23);
         txtPhilHealth.TabIndex = 53;
         // 
@@ -637,6 +639,7 @@ partial class Form1
         // 
         txtPagIbig.Location = new Point(670, 306);
         txtPagIbig.Name = "txtPagIbig";
+        txtPagIbig.ReadOnly = true;
         txtPagIbig.Size = new Size(100, 23);
         txtPagIbig.TabIndex = 55;
         // 
@@ -654,6 +657,7 @@ partial class Form1
         // 
         txtIncomeTax.Location = new Point(670, 334);
         txtIncomeTax.Name = "txtIncomeTax";
+        txtIncomeTax.ReadOnly = true;
         txtIncomeTax.Size = new Size(100, 23);
         txtIncomeTax.TabIndex = 57;
         // 
