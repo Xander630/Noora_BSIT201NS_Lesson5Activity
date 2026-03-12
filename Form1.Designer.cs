@@ -373,6 +373,7 @@ partial class Form1
         txtBasicRate.Name = "txtBasicRate";
         txtBasicRate.Size = new Size(100, 23);
         txtBasicRate.TabIndex = 25;
+        txtBasicRate.KeyPress += new KeyPressEventHandler(NumericOnly_KeyPress);
         // 
         // lblBasicHours
         // 
@@ -390,6 +391,7 @@ partial class Form1
         txtBasicHours.Name = "txtBasicHours";
         txtBasicHours.Size = new Size(100, 23);
         txtBasicHours.TabIndex = 27;
+        txtBasicHours.KeyPress += new KeyPressEventHandler(NumericOnly_KeyPress);
         // 
         // lblBasicIncome
         // 
@@ -435,6 +437,7 @@ partial class Form1
         txtHonorRate.Name = "txtHonorRate";
         txtHonorRate.Size = new Size(100, 23);
         txtHonorRate.TabIndex = 32;
+        txtHonorRate.KeyPress += new KeyPressEventHandler(NumericOnly_KeyPress);
         // 
         // lblHonorHours
         // 
@@ -452,6 +455,7 @@ partial class Form1
         txtHonorHours.Name = "txtHonorHours";
         txtHonorHours.Size = new Size(100, 23);
         txtHonorHours.TabIndex = 34;
+        txtHonorHours.KeyPress += new KeyPressEventHandler(NumericOnly_KeyPress);
         // 
         // lblHonorIncome
         // 
@@ -497,6 +501,7 @@ partial class Form1
         txtOtherRate.Name = "txtOtherRate";
         txtOtherRate.Size = new Size(100, 23);
         txtOtherRate.TabIndex = 39;
+        txtOtherRate.KeyPress += new KeyPressEventHandler(NumericOnly_KeyPress);
         // 
         // lblOtherHours
         // 
@@ -514,6 +519,7 @@ partial class Form1
         txtOtherHours.Name = "txtOtherHours";
         txtOtherHours.Size = new Size(100, 23);
         txtOtherHours.TabIndex = 41;
+        txtOtherHours.KeyPress += new KeyPressEventHandler(NumericOnly_KeyPress);
         // 
         // lblOtherIncome
         // 
@@ -687,6 +693,7 @@ partial class Form1
         txtSSSLoan.Name = "txtSSSLoan";
         txtSSSLoan.Size = new Size(100, 23);
         txtSSSLoan.TabIndex = 60;
+        txtSSSLoan.KeyPress += new KeyPressEventHandler(NumericOnly_KeyPress);
         // 
         // lblPagIbigLoan
         // 
@@ -704,6 +711,7 @@ partial class Form1
         txtPagIbigLoan.Name = "txtPagIbigLoan";
         txtPagIbigLoan.Size = new Size(100, 23);
         txtPagIbigLoan.TabIndex = 62;
+        txtPagIbigLoan.KeyPress += new KeyPressEventHandler(NumericOnly_KeyPress);
         // 
         // lblFacultySavings
         // 
@@ -721,6 +729,7 @@ partial class Form1
         txtFacultySavings.Name = "txtFacultySavings";
         txtFacultySavings.Size = new Size(100, 23);
         txtFacultySavings.TabIndex = 64;
+        txtFacultySavings.KeyPress += new KeyPressEventHandler(NumericOnly_KeyPress);
         // 
         // lblSalaryLoan
         // 
@@ -738,6 +747,7 @@ partial class Form1
         txtSalaryLoan.Name = "txtSalaryLoan";
         txtSalaryLoan.Size = new Size(100, 23);
         txtSalaryLoan.TabIndex = 66;
+        txtSalaryLoan.KeyPress += new KeyPressEventHandler(NumericOnly_KeyPress);
         // 
         // lblOtherLoans
         // 
@@ -755,6 +765,7 @@ partial class Form1
         txtOtherLoans.Name = "txtOtherLoans";
         txtOtherLoans.Size = new Size(100, 23);
         txtOtherLoans.TabIndex = 68;
+        txtOtherLoans.KeyPress += new KeyPressEventHandler(NumericOnly_KeyPress);
         // 
         // lblDedSummary
         // 

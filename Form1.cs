@@ -104,7 +104,7 @@ public partial class Form1 : Form
 
     private void BtnNetIncome_Click(object? sender, EventArgs e)
     {
-        // Use Gross Income as "Salary" in the formulas
+      
         decimal salary = GetDecimalFromTextBox(txtGrossIncome);
         if (salary <= 0)
         {
@@ -113,20 +113,19 @@ public partial class Form1 : Form
             return;
         }
 
-        // SSS (employee share)
         decimal msc = Math.Min(Math.Max(salary, 5000m), 35000m);
         decimal sss = msc * 0.05m;
 
-        // PhilHealth (employee share, 5% split)
+      
         decimal philHealthTotal = salary * 0.05m;
-        // apply salary ceiling 100,000
+    
         if (salary > 100000m)
         {
             philHealthTotal = 100000m * 0.05m;
         }
         decimal philHealthEmployee = philHealthTotal / 2m;
 
-        // Pag‑IBIG
+     
         decimal pagIbig;
         if (salary <= 1500m)
         {
@@ -142,10 +141,10 @@ public partial class Form1 : Form
             pagIbig = 200m;
         }
 
-        // Taxable income
+     
         decimal taxableIncome = salary - (sss + philHealthEmployee + pagIbig);
 
-        // Income tax (TRAIN Law, partial brackets provided)
+     
         decimal incomeTax;
         if (taxableIncome <= 20833m)
         {
@@ -161,17 +160,17 @@ public partial class Form1 : Form
         }
         else
         {
-            // For higher brackets, keep a simple extension (you can refine if needed)
+            
             incomeTax = 8541.8m + (taxableIncome - 66667m) * 0.25m;
         }
 
-        // Put auto‑computed regular deductions into the textboxes
+        
         txtSSS.Text = sss.ToString("N2");
         txtPhilHealth.Text = philHealthEmployee.ToString("N2");
         txtPagIbig.Text = pagIbig.ToString("N2");
         txtIncomeTax.Text = incomeTax.ToString("N2");
 
-        // Other deductions are still user‑entered
+      
         decimal sssLoan = GetDecimalFromTextBox(txtSSSLoan);
         decimal pagIbigLoan = GetDecimalFromTextBox(txtPagIbigLoan);
         decimal facultySavings = GetDecimalFromTextBox(txtFacultySavings);
@@ -288,5 +287,18 @@ public partial class Form1 : Form
     private void txtIncomeTax_TextChanged(object sender, EventArgs e)
     {
         
+    }
+
+    private void NumericOnly_KeyPress(object sender, KeyPressEventArgs e)
+    {
+        if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
+        {
+            e.Handled = true;
+        }
+
+        if (e.KeyChar == '.' && sender is TextBox tb && tb.Text.Contains('.'))
+        {
+            e.Handled = true;
+        }
     }
 }
